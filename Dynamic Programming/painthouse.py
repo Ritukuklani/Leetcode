@@ -1,4 +1,4 @@
-def minCost(self, costs: List[List[int]]) -> int:
+def minCost(self, costs):   # input type: List[List[int]], return type: int
 
 # Recursive approach using memoization
         # def paint_cost(n, color):
