@@ -13,7 +13,7 @@ class Solution:
                 if isPalindrome(s[start:i+1]):
                     curr.append(s[start:i+1])
                     backtrack(s, i+1, curr, result)
-                    curr.remove(s[start:i+1])
+                    curr.pop()
         result = []
         backtrack(s, 0, [], result)
         return result
