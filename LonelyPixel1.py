@@ -1,5 +1,5 @@
 class Solution:
-    def findLonelyPixel(self, picture: List[List[str]]) -> int:
+    def findLonelyPixel(self, picture) -> int:
         row_count = [0] * len(picture)
         col_count = [0] * len(picture[0])
         res = 0
