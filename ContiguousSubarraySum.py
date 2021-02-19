@@ -1,4 +1,5 @@
 class Solution:
+    import collections
     def checkSubarraySum(self, nums, k: int) -> bool:
         # count = 0
         # for i in range(len(nums)-1):
@@ -13,7 +14,8 @@ class Solution:
         
         # Using hashmap
         
-        my_dict = collections.defaultdict(int)
+        # my_dict = collections.defaultdict(int)
+        my_dict = {}
         my_dict[0] = -1
         curr_sum = 0
         for i in range(len(nums)):
