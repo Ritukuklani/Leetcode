@@ -6,7 +6,10 @@ class TreeNode:
         self.right = right
 class Solution:
     def generateTrees(self, n: int): #return type : List[TreeNode]:
+        memo = {}
         def helper(s,e):
+            if (s, e) in memo:
+                return memo[(s, e)]
             if s>e:
                 return [None,]
             all_trees = []
@@ -19,5 +22,6 @@ class Solution:
                         curr_tree.left = l
                         curr_tree.right = r
                         all_trees.append(curr_tree)
+            memo[(s, e)] = all_trees
             return all_trees
         return helper(1,n) if n else []
